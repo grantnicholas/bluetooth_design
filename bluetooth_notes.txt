@@ -1,0 +1,39 @@
+
+gatttool -t random -b D9:84:67:85:30:19 -I
+
+connect
+
+
+
+write computer => arduino
+char-write-cmd 0x00b 68656c6c6f
+
+where 68656c6c6f is hello in hex 
+
+
+
+char-read-hnd 0x003
+=> 55 41 52 54
+
+outputs device name in hex
+
+
+
+#IMPORTANT: tell the computer to listen for responses
+https://redbearlab.zendesk.com/entries/23561363-BLE-Shield-with-USB-Dongle-and-Python-
+
+char-write-req 0x0e 01:00
+
+gatttool -t random -b D9:84:67:85:30:19 -i hci0 --char-write-req --handle=0x00e -n 0100 --listen
+
+
+http://joost.damad.be/2013/08/experiments-with-bluetooth-low-energy.html
+https://lilyhack.wordpress.com/category/bluetooth-low-energy/
+http://www.jaredwolff.com/blog/get-started-with-bluetooth-low-energy/
+https://github.com/devicefactory/df1-manual/blob/master/howto_rpi.md
+https://gist.github.com/nouyang/2a6a733d8facd23115a4
+http://www.orangenarwhals.com/2014/06/bluetooth-low-energy-4-0-on-ubuntu-13-10-advertisements-sending-and-receiving/
+http://www.orangenarwhals.com/2014/07/python-adafruit-nrf8001-bluetooth-low-energy-breakout-in-20-minutes-ubuntu-14-04/
+https://blog.adafruit.com/2014/07/28/gatttool-ubuntu-and-adafruits-nrf8001-bluetooth-low-energy-breakout-in-20-minutes/
+http://www.cnx-software.com/2013/07/21/texas-instruments-sensortag-unboxing-getting-started-with-bluetooth-low-energy-in-linux-with-a-raspberry-pi/
+
