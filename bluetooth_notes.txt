@@ -37,3 +37,9 @@ http://www.orangenarwhals.com/2014/07/python-adafruit-nrf8001-bluetooth-low-ener
 https://blog.adafruit.com/2014/07/28/gatttool-ubuntu-and-adafruits-nrf8001-bluetooth-low-energy-breakout-in-20-minutes/
 http://www.cnx-software.com/2013/07/21/texas-instruments-sensortag-unboxing-getting-started-with-bluetooth-low-energy-in-linux-with-a-raspberry-pi/
 
+
+
+#post request
+
+cat test.txt | curl -H "Content-Type: text/plain" -X POST --data-binary @- http://104.236.62.9:3000/upload
+
