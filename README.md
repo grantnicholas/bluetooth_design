@@ -66,7 +66,7 @@ char-write-cmd 0xb FF00FF
 ##Now come back to my repo
 Instead of using her script use my much simpler scripts
 
-<code>python blue_write.py | decode.py > file_name.txt</code>
+<code>python blue_write.py | python decode.py > file_name.txt</code>
 
 What does it do under the hood?
 
@@ -116,7 +116,7 @@ This gathers information from stdin and decodes the input line by line and print
 
 Finally the output is written to a file of your choice. 
 
-<code>python blue_write.py | decode.py > file_name.txt</code>
+<code>python blue_write.py | python decode.py > file_name.txt</code>
 
 So that is the simple system I built to grab information from the Arduino over bluetooth using the standard linux/unix philosphy of programming. 
 
