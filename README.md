@@ -9,7 +9,7 @@ Code to communicate with the Adafruit nRF8001 bluetooth breakout board.
 ##However I ran into a few issues with her tutorial:
 
 1. Nancy's script was a bit complex and large for such a simple project. I favor small reusable components over big monolithic programs. 
-2. Nancy only showed how to do data streaming from the computer to the Arduino. I needed to do 2-way data streaming.If you need help figuring that out look at this tutorial.  
+2. Nancy only showed how to do data streaming from the computer to the Arduino. I needed to do 2-way data streaming.If you need help figuring out how to stream data from your Arduino to your computer then this is the right place. 
 
 ###First read her tutorial which I attached here
 As part of my work on Swarmbuddies (robots that dance to music and create formations) we decided to use bluetooth low energy for smartphone support, but also needed it to work on the desktop side for our computer vision software to work.
